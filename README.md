@@ -1,5 +1,7 @@
 # AP-Lit-2025
-What's the point of this AP Lit Class (in my opinion)???👀 made with love in Windsurf📖💖 Controls: WASD/Arrow Keys to move. Press R to restart Goal: Reach enlightenment by saving the people in need.
+What's the point of this AP Lit Class (in my opinion)???👀 made with love in Windsurf📖💖 
+Controls: WASD/Arrow Keys to move. Press R to restart 
+Goal: Reach enlightenment🤩
 
 Backstory: What is goodness? In my opinion, goodness is just a set of actions, no matter how big or small, that are taken to create a better world.
 A better world is one without needless suffering, brutality, oppresssion, etc. Sadly, people don't choose goodness because they feel like they can't afford it. The Road is a perfect example; survival of the fittest leads to a lack of kindness (inspired section 1 of this game).
