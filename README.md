@@ -1,6 +1,6 @@
 # AP-Lit-2025
 What's the point of this AP Lit Class (in my opinion)???👀 made with love in Windsurf📖💖 
-Controls: WASD/Arrow Keys to move. Press R to restart 
+Controls: WASD/Arrow Keys to move. Press R to restart. 
 Goal: Reach enlightenment🤩
 
 Backstory: What is goodness? In my opinion, goodness is just a set of actions, no matter how big or small, that are taken to create a better world.
