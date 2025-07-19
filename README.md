@@ -1,5 +1,6 @@
 # AP-Lit-2025
-What's the point of this AP Lit Class (in my opinion)???👀 made with love in Windsurf📖💖 
+What's the point of this AP Lit Class (in my opinion)???👀 made with love in Windsurf📖💖  
+Run the_game.exe to start.
 Controls: WASD/Arrow Keys to move. Press R to restart. 
 Goal: Reach enlightenment🤩
 
