@@ -676,23 +676,36 @@ class Game:
             
         # Handle reviving a dead NPC in Zone 3
         if npc.dead and self.state == GameState.ZONE_RIVERBANK:
-            if self.player.resources >= 5:
+            # If player chose option 4 (kept all resources), reduce revival cost
+            revival_cost = 3 if self.choice_made == 'neither' else 5
+            
+            if self.player.resources >= revival_cost:
                 # Fully restore the NPC to 5/5 gems
                 npc.dead = False
                 npc.needs_help = False
                 npc.helped = True
                 npc.gems_given = 5
                 npc.gems_required = 5
-                self.player.resources -= 5
+                self.player.resources -= revival_cost
                 self.revived_npc = True
-                self.show_message(
-                    f"You've fully revived and restored the {npc.npc_type} to full health with 5 gems!",
-                    120
-                )
+                
+                # Update message based on choice
+                if self.choice_made == 'neither':
+                    message = f"You've revived the {npc.npc_type} with {revival_cost} gems! "
+                    message += f"You have {self.player.resources} gems left."
+                else:
+                    message = f"You've fully revived and restored the {npc.npc_type} with {revival_cost} gems!"
+                
+                self.show_message(message, 120)
                 npc.update_sprite()
+                
+                # Check if both NPCs have been revived
+                if all(not n.dead for n in self.npcs):
+                    self.show_message("You've revived both NPCs! Now help them with gems to achieve enlightenment.", 180)
+                    
                 return True
             else:
-                self.show_message(f"You need 5 gems to revive the {npc.npc_type}.", 120)
+                self.show_message(f"You need {revival_cost} gems to revive the {npc.npc_type}.", 120)
                 return False
             
         # Normal gem giving to living NPCs
@@ -794,7 +807,13 @@ class Game:
                         for npc in self.npcs:
                             npc.dead = True
                             npc.update_sprite()
-                        self.show_message(f"You kept all {self.player.resources} resources for yourself, but both NPCs fade away...")
+                        self.show_message(
+                            f"You kept all {self.player.resources} resources for yourself, but both NPCs fade away...\n"
+                            "You'll need to find more gems in the next zone to revive them.",
+                            180
+                        )
+                        # Ensure player has 3 gems to allow reviving both NPCs (3 gems each)
+                        self.player.resources = 3
                         self.choice_made = 'neither'
                         self.choice_active = False
                     
