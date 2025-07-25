@@ -13,5 +13,3 @@ Once we realize that we can be bigger forces for good than we think, we can reac
 
 In this game, the more "magic gems" you give away, the slower you become, which does make the game more inconvenient to play. You do have choices to reduce this inconvenience(they're a surprise!). As you progress, though, you'll find that making the journey is worth it when you save the lives of two helpless NPCs.
 
-I tried my best to explore this theme of goodness in a short game...hopefully you notice these themes more than the glitches😅😅
-Anyways, go play!
